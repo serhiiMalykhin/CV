@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serhii Malykhin - CV</title>
     <style>
-		a:link, a:visited {
-			color: inherit;
-			text-decoration: none;
-		}
+		a {
+            color: #0073e6; /* Original link color */
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ffffff;      /* Text color on hover */
+            background-color: #0073e6; /* Background color on hover */
+            padding: 2px 4px;    /* Padding for effect */
+            border-radius: 3px;  /* Rounding corners */
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -172,306 +178,338 @@
     </div>
     <script>
         const jsonData = {
-    "name": "Serhii Malykhin",
-    "title": "Senior Java Developer | Streaming Engineer",
-    "email": "serhii.malykhin@gmail.com",
-    "phone": "+38(067)786-20-98",
-    "location": "Lutsk, Ukraine",
-    "avatar": {
-      "url": "https://s3.resume.io/uploads/profile_picture/file/15649795/9e7d2e64be2539ac79153b5318a6b9c4.jpg?version=5bfa1ebc4"
-    },
-    "profile": [
-	  "Experienced Java engineer with a Master’s degree in Applied Mathematics and 7+ years of software development experience.",
-	  "Skilled in developing distributed and streaming systems with Confluent Kafka, Apache Flink, and Spring.",
-	  "Proficient in AWS cloud services, microservices architecture, and real-time data processing.",
-	  "Holder of Confluent Kafka Developer Certificate, with expertise in Kafka Streams, Connect, Avro, and Protobuf schemas.",
-	  "Strong focus on clean code practices, test-driven development (TDD), and high-quality software delivery.",
-	  "Proven track record of collaborating across teams and achieving business goals in dynamic environments"
-    ],
-    "skills": [
-      "Programming Languages: Java(SE/EE)",
-	  "Streaming tools: Apache Flink, Apache Kafka, Confluent Kafka, Kafka Streams (kStreams), Kafka SQL (kSQL), Avro, Protobuf, Schema Registry",
-	  "Messaging/Data Transfer: RabbitMQ, JMS(Java Message Service), Restful Services, Web Services",
-	  "Monitoring tools: Grafana, Datadog, Log4J",
-	  "CI/CD Tools: Terraform, GitLab, GitHab, Apache Maven, Gradle, Jenkins, Kubernetes, Docker",
-	  "Cloud AWS: SQS, SNS, S3, EC2, EKS, MSF, MSK, CloudWatch, Lambda, CloudFormation, DynamoDb, RDS, Secret Manager, API Gateway, IAM",
-	  "Testing/Mocking tools: Mockito, JUnit, Cucumber",
-	  "DB: [SQL(Oracle, Postgres, MySQL), NoSQL(Redis, MongoDB, DynamoDB), RDBMS]",
-	  "Monitoring: Grafana, Datadog, Log4j, Prometheus",
-	  "Microservice/Frameworks: Spring(Framework, MVC, Boot, Data, Security, Cloud, Batch), Microservices Architecture, Dagger 2, JPA (Java Persistence API)",
-	  "Basic(HTML, CSS, JS, TypeScript)",
-	  "Dev Tools: Agile(Scrum/Kanban), Eclipse, Intellij IDEA, Visual Studio Code, Postman, SOAP UI",
-	  "Data parsing: JSON, XML, YAML, Excel, CSV"
-    ],
-    "education": [
-      {
-        "degree": "Master's Degree in Applied Mathematics",
-        "institution": "University Name",
-        "year": "2014-2016"
-      }
-    ],
-	"experience": [
-	{
-      "title": "Self Employeed",
-      "employer": "Self Employeed",
-      "dateFrom": "2024-11",
-      "dateUntil": null,
-      "projectName": "Self-Educated",
-      "description": "Self educated - looking for a new opportinities",
-      "tasks": ["udemy courses to get aws developer certificate"],
-      "technologies": [],
-      "isDateUntilPresent": true
-    },
-    {
-      
-      "title": "Senior Java Developer",
-      "employer": "Ness(remote)",
-      "dateFrom": "2024-03",
-      "dateUntil": "2024-10",
-      "projectName": "One Main Financial (Loan Document management)",
-      "description": "Auto Loan Origination System",
-      "tasks": [
-        "Implemented security integration with OKTA and supported 3 types of custom keys",
-        "Developed 7 GraphQL API",
-        "Implemented security 3 roles and profile segregation using OKTA best practices in 3 micro-services",
-        "Created/Updated 49 automation tests and improved 57 APIs by applying best practices",
-        "Participated in customer meetings",
-        "Handled bug remediation and conducted QA testing"
-      ],
-      "technologies": [
-        "AWS (S3 , Secrets Manager, SQS)", "Java 17", "Docker", "K8S", "Jenkins", "Spring (Boot, Cloud, Test)", "Camunda", "GRC communication", "GraphQL", "Typescript, Angular", "Postgress", "IT Cucumber, JUnit", "Liquibase", "Maven", "Confluent"
-      ],
-      "isDateUntilPresent": false
-    },
-    {
-      
-      "title": "Senior Java Developer| Streaming Engineer",
-      "employer": "Ness(remote)",
-      "dateFrom": "2019-11",
-      "dateUntil": "2024-03",
-      "projectName": "Western Asset Management (Financial System)",
-      "description": "Pre-Trade Compliance System capable of scaling to 4000 CPUs",
-      "tasks": [
-        "Designed and implemented streaming pipelines for real-time event processing for ingesting reference data for reference/market data sources",
-        "Improved the performance of 9 pipelines for processing reference and market data to support scaling calculations to 4000 CPUs",
-        "Developed support applications for statistics and bug tracking and integrated in 17 micro-services.",
-        "Designed and implemented 150 unit/integration automated tests",
-        "Implemented data lineage to trace all calculation inputs for 63 data sources",
-		"Developed integration between kafka and customers spring application via(request/schedule execution)",
-		"Upgrad of Apache Flink from version 10 to version 13, ensuring compatibility and enhancing system performance."
-      ],
-      "technologies": [
-		"Java 11/8", "Apache Flink 13", "Confluent Kafka", "Redis", "Spring (Boot, Data, JPA)", "AWS (MSF, MSK, EC2 , S3, CloudWatch)", "Jenkins", "Maven", "Splunk", "Docker"
-      ],
-      "isDateUntilPresent": false
-    },
-    {
-      
-      "title": "Middle/Senior Java Developer",
-      "employer": "EPAM System",
-      "city": "Kharkiv",
-      "dateFrom": "2019-08",
-      "dateUntil": "2019-11",
-      "projectName": "Expedia - Travel Distribution Platform (TDP)",
-      "description": "Platform designed for travel distribution and management.",
-      "tasks": [
-        "Developed monitoring and analyzer tools with AWS IAM integration between accounts",
-        "Developed automated terraform and cloudFormation scripts for project setup for 3 applications",
-        "Created UI pages and reports with OpenCSV",
-        "Managed cross-team communication and coordinated tickets/bugs for a team of 4 engineers",
-		"Developed IT tests using cucumber framework"
-      ],
-      "technologies": [
-		"AWS", "Spring Boot", "MySQL", "ElasticSearch", "Terraform", "Docker", "Jenkins", "Maven", "GitLab", "Cucumber"
-      ],
-      "isDateUntilPresent": false
-    },
-    {
-      
-      "title": "Middle/Senior Java Developer",
-      "employer": "EPAM System",
-      "city": "Kharkiv",
-      "dateFrom": "2018-07",
-      "dateUntil": "2019-08",
-      "projectName": "Datalex - Travel Distribution Platform (TDP)",
-      "description": "Travel Distribution Platform supporting multiple projects.",
-      "tasks": [		
-		"Developed Spring Batch application for import/export BRE rule, certificates, configurations",
-		"Demoed of developed features to Datalex customer", 
-		"Developed and Implemented - new functionality/features as discounts", 
-		"Participate in meetings with customers issues(support client base issues for the system)", 
-		"Supported projects: TDP, dcb, cb-rest, voucher-api, doc-api", 
-		"Conducted unit and manual tests, bug fixing"
-      ],
-      "technologies": [		
-		"Oracle", "SoapUI", "Postman", "Altova", "IDEA", "WinSCP", "Jenkins", "Checkstyle", "SonarQube", "Maven", "Ant", "Gradle", "Git", "JBOSS", "Tomcat", "Scram", "Kanban", "Confluence", "Bitbucket",  "Excel", "XML", "EJB", "SOAP", "REST", "Java(EE/SE)", "Spring batch", "Spring", "Swagger"
-      ],
-      "isDateUntilPresent": false
-    },
-    {
-      
-      "title": "Java Developer",
-      "employer": "EPAM System",
-      "city": "Kharkiv",
-      "dateFrom": "2018-01",
-      "dateUntil": "2018-06",
-      "projectName": "The Wealth Management RoboAdvisor",
-      "description": "System provides functionality for automatic investment advice based on customer questionnaires and financial indicators.",
-      "tasks": [
-        "Developed REST API services",
-        "Loaded portfolios and recommendations from source: excel files",
-        "Created and supported migration scripts for DB using Liquibase",
-        "Managed portfolios (sell/purchase)",
-        "Bug fixing and performed unit and SIT tests",
-        "Conducted code reviews"
-      ],
-      "technologies": [
-		"Mysql", "Maven", "OpenShift", "Docker", "Jenkins", "SonarQube", "Nexus", "Gerrit", "GitLab", "Jira", "Confluence", "Liquibase", "Java 8", "Spring 5", "REST"," Spring (Boot, Data, Security, Cloud)", "Swagger"
-      ],
-      "isDateUntilPresent": false
-    },
-    {
-      
-      "title": "Junior Java Developer",
-      "employer": "EPAM System",
-      "city": "Kharkiv",
-      "dateFrom": "2017-05",
-      "dateUntil": "2018-01",
-      "projectName": "Cloud Systems Interface",
-      "description": "Server-less application for managing different cloud systems (AWS, Google Cloud, Azure) with a user-friendly interface.",
-      "tasks": [
-        "Helped developing image managment in various cloud providers (AWS, Google, Azure)",
-        "Handled metrics management",
-        "Bug fix/unit test improvments",
-        "Created: AWS Lambdas, Step Functions, SNS(notifications for EC2 status failures)",
-        "Performed lambda refactoring: including applying Dagger 2 and Chain Pattern"
-      ],
-      "technologies": [ "Java8", "Python",
-        "DynamoDB", "JIRA", "Maven", "GitLab", "IntelliJ IDEA(Community)", "Jenkins", "AWS: Lambda, DynamoDB, S3, EC2, Cloud Watch, SNS, API Gateway, Cognito, Step Function, IAM, Cloud Formation", "Dagger 2.0"
-      ],
-      "isDateUntilPresent": false
-    },
-    {
-      
-      "title": "Junior Java Developer",
-      "employer": "EPAM System",
-      "city": "Kharkiv",
-      "dateFrom": "2017-01",
-      "dateUntil": "2017-05",
-      "projectName": "VMS-POC",
-      "description": "Project is based on micro-service architecture. System provides full &nbsp;life circle for managing vouchers and marketing campaigns.",
-      "tasks": [
-        "Developed REST APIs and services",
-        "Developed integration and unit tests",
-        "Bug fixing",
-        "Developed newsletter-sending functionality via internal EPAM system"
-      ],
-      "technologies": [
-        "MongoDB", "JIRA", "Maven", "Jenkins", "GitLab", "Nginx", "IntelliJ IDEA(Community)", "Swagger", "Check-style", "Kubernetes", "JMS", "Java8", "Spring (Framework, Boot, MVC, Cloud, Security, Data)", "Mockito", "RabbitMQ", "JUnit", "Netflix" 
-      ],
-      "isDateUntilPresent": false
-    },
-    {
-      
-      "title": "Trainee Java Developer",
-      "employer": "EPAM System",
-      "city": "Kharkiv",
-      "dateFrom": "2016-10",
-      "dateUntil": "2016-12",
-      "projectName": "Training Project",
-      "description": "Training application with UI, backend, and database layers.",
-      "tasks": [
-        "Educated by EPAM specialists",
-        "Completed successfully all tasks and got a certificate of graduation"
-      ],
-      "technologies": [
-        "Java Core, SE/EE", "Spring Framework", "SQL", "JIRA", "Maven", "JUnit", "GitLab", "IntelliJ IDEA", "Git", "HTML", "CSS3"
-      ],
-      "isDateUntilPresent": false
-    }
-  ],
-	"certificates": [
-                {
-                    "title": "Certificates",
-					"link" : "https://certificates.confluent.io/be320bfd-9937-4f33-baff-d94be3d91334#gs.h19afd",
-                    "description": "<p>Confluent Kafka Developer</p>",
-                    "duration": "2024-10-01 - 2026-10-01"
-                }
+            "name": "Serhii Malykhin",
+            "title": "Senior Java Developer | Streaming Engineer",
+            "email": "serhii.malykhin@gmail.com",
+            "phone": "+38(067)786-20-98",
+            "location": "Lutsk, Ukraine",
+            "avatar": {
+              "url": "https://s3.resume.io/uploads/profile_picture/file/15649795/9e7d2e64be2539ac79153b5318a6b9c4.jpg?version=5bfa1ebc4"
+            },
+            "profile": [
+              "Experienced Java engineer with a Master’s degree in Applied Mathematics and 7+ years of software development experience.",
+              "Skilled in developing distributed and streaming systems with Confluent Kafka, Apache Flink, and Spring.",
+              "Proficient in AWS cloud services, microservices architecture, and real-time data processing.",
+              "Holder of Confluent Kafka Developer Certificate, with expertise in Kafka Streams, Connect, Avro, and Protobuf schemas.",
+              "Strong focus on clean code practices, test-driven development (TDD), and high-quality software delivery.",
+              "Proven track record of collaborating across teams and achieving business goals in dynamic environments"
             ],
-    "languages": [
-      "English(Upper-Intermediate)","Ukrainian(Native)","Rissian(Native)"
-    ],
-  };
+            "skills": [
+              "Java(SE/EE)",
+              "Apache Flink, Apache Kafka, Confluent Kafka, Kafka Streams (kStreams), Kafka SQL (kSQL), Avro, Protobuf, Schema Registry",
+              "RabbitMQ, JMS(Java Message Service), Restful Services, Web Services",
+              "Monitoring tools: Grafana, Datadog, Log4J",
+              "CI/CD Tools: Terraform, GitLab, GitHab, Apache Maven, Gradle, Jenkins, Kubernetes, Docker",
+              "Cloud AWS: SQS, SNS, S3, EC2, EKS, MSF, MSK, CloudWatch, Lambda, CloudFormation, DynamoDb, RDS, Secret Manager, API Gateway, IAM",
+              "Mockito, JUnit, Cucumber",
+              "DB: Oracle, Postgres, MySQL, Redis, MongoDB, DynamoDB, RDBMS",
+              "Grafana, Datadog, Log4j, Prometheus",
+              "Spring(Framework, MVC, Boot, Data, Security, Cloud, Batch), Microservices Architecture, Dagger 2, JPA (Java Persistence API)",
+              "Basic(HTML, CSS, JS, TypeScript)",
+              "Agile(Scrum/Kanban), Eclipse, Intellij IDEA, Visual Studio Code, Postman, SOAP UI",
+              "JSON, XML, YAML, Excel, CSV"
+            ],
+            "education": [
+              {
+                "degree": "Master's Degree in Applied Mathematics",
+                "institution": "University Name",
+                "year": "2014-2016"
+              }
+            ],
+            "experience": [
+            {
+              "title": "Self Employeed",
+              "employer": "Self Employeed",
+              "dateFrom": "2024-11",
+              "dateUntil": null,
+              "projectName": "Self-Educated",
+              "description": "Self educated - looking for a new opportunities",
+              "tasks": [],
+              "courses": [
+                  {
+                  "title": "udemy courses to get aws developer certificate",
+                  "link": "https://www.udemy.com/course/aws-certified-developer-associate-dva-c01"
+                  }
+              ],
+              "technologies": [],
+              "isDateUntilPresent": true
+            },
+            {
+
+              "title": "Senior Java Developer",
+              "employer": "Ness(remote)",
+              "dateFrom": "2024-03",
+              "dateUntil": "2024-10",
+              "projectName": "One Main Financial (Loan Document management)",
+              "description": "Auto Loan Origination System",
+              "tasks": [
+                "Implemented security integration with OKTA and supported 3 types of custom keys",
+                "Developed 7 GraphQL API",
+                "Implemented security 3 roles and profile segregation using OKTA best practices in 3 micro-services",
+                "Created/Updated 49 automation tests and improved 57 APIs by applying best practices",
+                "Participated in customer meetings",
+                "Handled bug remediation and conducted QA testing"
+              ],
+              "courses": [],
+              "technologies": [
+                "AWS (S3 , Secrets Manager, SQS)", "Java 17", "Docker", "K8S", "Jenkins", "Spring (Boot, Cloud, Test)", "Camunda", "GRC communication", "GraphQL", "Typescript, Angular", "Postgress", "IT Cucumber, JUnit", "Liquibase", "Maven", "Confluent"
+              ],
+              "isDateUntilPresent": false
+            },
+            {
+
+              "title": "Senior Java Developer| Streaming Engineer",
+              "employer": "Ness(remote)",
+              "dateFrom": "2019-11",
+              "dateUntil": "2024-03",
+              "projectName": "Western Asset Management (Financial System)",
+              "description": "Pre-Trade Compliance System capable of scaling to 4000 CPUs",
+              "tasks": [
+                "Designed and implemented streaming pipelines for real-time event processing for ingesting reference data for reference/market data sources",
+                "Improved the performance of 9 pipelines for processing reference and market data to support scaling calculations to 4000 CPUs",
+                "Developed support applications for statistics and bug tracking and integrated in 17 micro-services.",
+                "Designed and implemented 150 unit/integration automated tests",
+                "Implemented data lineage to trace all calculation inputs for 63 data sources",
+                "Developed integration between kafka and customers spring application via(request/schedule execution)",
+                "Upgrad of Apache Flink from version 10 to version 13, ensuring compatibility and enhancing system performance."
+              ],"courses": [],
+              "technologies": [
+                "Java 11/8", "Apache Flink 13", "Confluent Kafka", "Redis", "Spring (Boot, Data, JPA)", "AWS (MSF, MSK, EC2 , S3, CloudWatch)", "Jenkins", "Maven", "Splunk", "Docker"
+              ],
+              "isDateUntilPresent": false
+            },
+            {
+
+              "title": "Middle/Senior Java Developer",
+              "employer": "EPAM System",
+              "city": "Kharkiv",
+              "dateFrom": "2019-08",
+              "dateUntil": "2019-11",
+              "projectName": "Expedia - Travel Distribution Platform (TDP)",
+              "description": "Platform designed for travel distribution and management.",
+              "tasks": [
+                "Developed monitoring and analyzer tools with AWS IAM integration between accounts",
+                "Developed automated terraform and cloudFormation scripts for project setup for 3 applications",
+                "Created UI pages and reports with OpenCSV",
+                "Managed cross-team communication and coordinated tickets/bugs for a team of 4 engineers",
+                "Developed IT tests using cucumber framework"
+              ],"courses": [],
+              "technologies": [
+                "AWS", "Spring Boot", "MySQL", "ElasticSearch", "Terraform", "Docker", "Jenkins", "Maven", "GitLab", "Cucumber"
+              ],
+              "isDateUntilPresent": false
+            },
+            {
+
+              "title": "Middle/Senior Java Developer",
+              "employer": "EPAM System",
+              "city": "Kharkiv",
+              "dateFrom": "2018-07",
+              "dateUntil": "2019-08",
+              "projectName": "Datalex - Travel Distribution Platform (TDP)",
+              "description": "Travel Distribution Platform supporting multiple projects.",
+              "tasks": [
+                "Developed Spring Batch application for import/export BRE rule, certificates, configurations",
+                "Demoed of developed features to Datalex customer",
+                "Developed and Implemented - new functionality/features as discounts",
+                "Participate in meetings with customers issues(support client base issues for the system)",
+                "Supported projects: TDP, dcb, cb-rest, voucher-api, doc-api",
+                "Conducted unit and manual tests, bug fixing"
+              ],"courses": [],
+              "technologies": [
+                "Oracle", "SoapUI", "Postman", "Altova", "IDEA", "WinSCP", "Jenkins", "Checkstyle", "SonarQube", "Maven", "Ant", "Gradle", "Git", "JBOSS", "Tomcat", "Scram", "Kanban", "Confluence", "Bitbucket",  "Excel", "XML", "EJB", "SOAP", "REST", "Java(EE/SE)", "Spring batch", "Spring", "Swagger"
+              ],
+              "isDateUntilPresent": false
+            },
+            {
+
+              "title": "Java Developer",
+              "employer": "EPAM System",
+              "city": "Kharkiv",
+              "dateFrom": "2018-01",
+              "dateUntil": "2018-06",
+              "projectName": "The Wealth Management RoboAdvisor",
+              "description": "System provides functionality for automatic investment advice based on customer questionnaires and financial indicators.",
+              "tasks": [
+                "Developed REST API services",
+                "Loaded portfolios and recommendations from source: excel files",
+                "Created and supported migration scripts for DB using Liquibase",
+                "Managed portfolios (sell/purchase)",
+                "Bug fixing and performed unit and SIT tests",
+                "Conducted code reviews"
+              ],"courses": [],
+              "technologies": [
+                "Mysql", "Maven", "OpenShift", "Docker", "Jenkins", "SonarQube", "Nexus", "Gerrit", "GitLab", "Jira", "Confluence", "Liquibase", "Java 8", "Spring 5", "REST"," Spring (Boot, Data, Security, Cloud)", "Swagger"
+              ],
+              "isDateUntilPresent": false
+            },
+            {
+
+              "title": "Junior Java Developer",
+              "employer": "EPAM System",
+              "city": "Kharkiv",
+              "dateFrom": "2017-05",
+              "dateUntil": "2018-01",
+              "projectName": "Cloud Systems Interface",
+              "description": "Server-less application for managing different cloud systems (AWS, Google Cloud, Azure) with a user-friendly interface.",
+              "tasks": [
+                "Helped developing image managment in various cloud providers (AWS, Google, Azure)",
+                "Handled metrics management",
+                "Bug fix/unit test improvments",
+                "Created: AWS Lambdas, Step Functions, SNS(notifications for EC2 status failures)",
+                "Performed lambda refactoring: including applying Dagger 2 and Chain Pattern"
+              ],"courses": [],
+              "technologies": [ "Java8", "Python",
+                "DynamoDB", "JIRA", "Maven", "GitLab", "IntelliJ IDEA(Community)", "Jenkins", "AWS: Lambda, DynamoDB, S3, EC2, Cloud Watch, SNS, API Gateway, Cognito, Step Function, IAM, Cloud Formation", "Dagger 2.0"
+              ],
+              "isDateUntilPresent": false
+            },
+            {
+
+              "title": "Junior Java Developer",
+              "employer": "EPAM System",
+              "city": "Kharkiv",
+              "dateFrom": "2017-01",
+              "dateUntil": "2017-05",
+              "projectName": "VMS-POC",
+              "description": "Project is based on micro-service architecture. System provides full &nbsp;life circle for managing vouchers and marketing campaigns.",
+              "tasks": [
+                "Developed REST APIs and services",
+                "Developed integration and unit tests",
+                "Bug fixing",
+                "Developed newsletter-sending functionality via internal EPAM system"
+              ],"courses": [],
+              "technologies": [
+                "MongoDB", "JIRA", "Maven", "Jenkins", "GitLab", "Nginx", "IntelliJ IDEA(Community)", "Swagger", "Check-style", "Kubernetes", "JMS", "Java8", "Spring (Framework, Boot, MVC, Cloud, Security, Data)", "Mockito", "RabbitMQ", "JUnit", "Netflix"
+              ],
+              "isDateUntilPresent": false
+            },
+            {
+
+              "title": "Trainee Java Developer",
+              "employer": "EPAM System",
+              "city": "Kharkiv",
+              "dateFrom": "2016-10",
+              "dateUntil": "2016-12",
+              "projectName": "Training Project",
+              "description": "Training application with UI, backend, and database layers.",
+              "tasks": [
+                "Educated by EPAM specialists",
+                "Completed successfully all tasks and got a certificate of graduation"
+              ],"courses": [],
+              "technologies": [
+                "Java Core, SE/EE", "Spring Framework", "SQL", "JIRA", "Maven", "JUnit", "GitLab", "IntelliJ IDEA", "Git", "HTML", "CSS3"
+              ],
+              "isDateUntilPresent": false
+            }
+          ],
+            "certificates": [
+                        {
+                            "title": "Certificates",
+                            "link" : "https://certificates.confluent.io/be320bfd-9937-4f33-baff-d94be3d91334#gs.h19afd",
+                            "description": "<p>Confluent Kafka Developer</p>",
+                            "duration": "2024-10-01 - 2026-10-01"
+                        }
+                    ],
+            "languages": [
+              "English(Upper-Intermediate)","Ukrainian(Native)","Rissian(Native)"
+            ],
+          };
 
         const displayExperience = (experiences) => {
-    const experienceContainer = document.getElementById("experience");
-    const groupedByCompany = experiences.reduce((acc, exp) => {
-        if (!acc[exp.employer]) {
-            acc[exp.employer] = [];
-        }
-        acc[exp.employer].push(exp);
-        return acc;
-    }, {});
+        const experienceContainer = document.getElementById("experience");
+        const groupedByCompany = experiences.reduce((acc, exp) => {
+            if (!acc[exp.employer]) {
+                acc[exp.employer] = [];
+            }
+            acc[exp.employer].push(exp);
+            return acc;
+        }, {});
 
-    for (const [company, experiences] of Object.entries(groupedByCompany)) {
-        const companySection = document.createElement("div");
-        companySection.classList.add("company-section");
+        for (const [company, experiences] of Object.entries(groupedByCompany)) {
+            const companySection = document.createElement("div");
+            companySection.classList.add("company-section");
 
-        const companyHeader = document.createElement("div");
-        companyHeader.classList.add("company-header");
-        companyHeader.textContent = company;
-        
-        // Add the toggle functionality
-        companyHeader.style.cursor = "pointer";  // Make it look clickable
-        companyHeader.addEventListener('click', () => {
-            const content = companySection.querySelector(".company-content");
-            // Toggle visibility by checking the current display state
-            content.style.display = content.style.display === "none" ? "block" : "none";
-        });
+            const companyHeader = document.createElement("div");
+            companyHeader.classList.add("company-header");
+            companyHeader.textContent = company;
 
-        companySection.appendChild(companyHeader);
-
-        const companyContent = document.createElement("div");
-        companyContent.classList.add("company-content");
-        companyContent.style.display = "block";  // Start with the content hidden
-
-        experiences.forEach(exp => {
-            const experienceItem = document.createElement("div");
-            experienceItem.classList.add("experience-item");
-
-            const title = document.createElement("h4");
-            title.textContent = exp.title;
-
-            const duration = document.createElement("span");
-            duration.classList.add("experience-duration");
-            duration.textContent = `${exp.dateFrom} - ${exp.isDateUntilPresent ? "Present" : exp.dateUntil}`;
-
-            const description = document.createElement("p");
-            description.textContent = exp.description;
-
-            const project = document.createElement("p");
-            project.classList.add("experience-project");
-            project.textContent = `Project: ${exp.projectName}`;
-
-            const tasks = document.createElement("ul");
-            exp.tasks.forEach(task => {
-                const taskItem = document.createElement("li");
-                taskItem.textContent = task;
-                tasks.appendChild(taskItem);
+            // Add the toggle functionality
+            companyHeader.style.cursor = "pointer";  // Make it look clickable
+            companyHeader.addEventListener('click', () => {
+                const content = companySection.querySelector(".company-content");
+                // Toggle visibility by checking the current display state
+                content.style.display = content.style.display === "none" ? "block" : "none";
             });
 
-            companyContent.appendChild(experienceItem);
-            experienceItem.appendChild(title);
-            experienceItem.appendChild(duration);
-            experienceItem.appendChild(description);
-            experienceItem.appendChild(project);
-            experienceItem.appendChild(tasks);
-        });
+            companySection.appendChild(companyHeader);
 
-        companySection.appendChild(companyContent);
-        experienceContainer.appendChild(companySection);
-    }
-};
+            const companyContent = document.createElement("div");
+            companyContent.classList.add("company-content");
+            companyContent.style.display = "block";  // Start with the content hidden
+
+            var sumDuration = 0;
+            experiences.forEach(exp => {
+                const experienceItem = document.createElement("div");
+                experienceItem.classList.add("experience-item");
+
+                const title = document.createElement("h4");
+                title.textContent = exp.title;
+
+                const duration = document.createElement("span");
+                duration.classList.add("experience-duration");
+                duration.textContent = `${exp.dateFrom} - ${exp.isDateUntilPresent ? "Present" : exp.dateUntil}`;
+
+                const description = document.createElement("p");
+                description.textContent = exp.description;
+
+                const project = document.createElement("p");
+                project.classList.add("experience-project");
+                project.textContent = `Project: ${exp.projectName}`;
+
+                const tasks = document.createElement("ul");
+                exp.tasks.forEach(task => {
+                    const taskItem = document.createElement("li");
+                    taskItem.textContent = task;
+                    tasks.appendChild(taskItem);
+                });
+
+                exp.courses.forEach(course => {
+                    const taskItem = document.createElement("li");
+                    taskItem.innerHTML = `
+                        ${course.link ? `<a href="${course.link}">${course.title}</a>` : course.title}
+                    `;
+                    tasks.appendChild(taskItem);
+                });
+
+                companyContent.appendChild(experienceItem);
+                experienceItem.appendChild(title);
+                experienceItem.appendChild(duration);
+                experienceItem.appendChild(description);
+                experienceItem.appendChild(project);
+                experienceItem.appendChild(tasks);
+
+                if(!exp.isDateUntilPresent) {
+                            sumDuration += calculateYears(exp.dateFrom, exp.dateUntil);
+                        }
+            });
+
+            const years = Math.round(sumDuration);
+            const months = sumDuration - years < 0 ? -1 : Math.round((sumDuration - years) * 10);
+            companyHeader.innerHTML = `${company}: ${Math.round(sumDuration)} years ${months > 0 ? months + (months < 2 ? "month" : "months" ): ""} `
+
+
+            companySection.appendChild(companyContent);
+            experienceContainer.appendChild(companySection);
+        }
+    };
+        function calculateYears(dateFrom, dateUntil) {
+            const startDate = new Date(`${dateFrom}-01`);
+            const endDate = dateUntil ? new Date(`${dateUntil}-01`) : new Date();
+            const years = endDate.getFullYear() - startDate.getFullYear();
+            const months = endDate.getMonth() - startDate.getMonth();
+            return years + (months / 10);
+        }
 
         const initProfile = () => {
             document.getElementById("name").textContent = jsonData.name;
@@ -523,6 +561,14 @@
 
             displayExperience(jsonData.experience);
         };
+
+        function calculateYears(dateFrom, dateUntil) {
+            const startDate = new Date(`${dateFrom}-01`);
+            const endDate = dateUntil ? new Date(`${dateUntil}-01`) : new Date();
+            const years = endDate.getFullYear() - startDate.getFullYear();
+            const months = endDate.getMonth() - startDate.getMonth();
+            return years + (months / 10);
+        }
 
         window.onload = initProfile;
     </script>
