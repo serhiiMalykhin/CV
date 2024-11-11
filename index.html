@@ -476,9 +476,10 @@
         const initProfile = () => {
             document.getElementById("name").textContent = jsonData.name;
             document.getElementById("title").textContent = jsonData.title;
-            document.getElementById("email").textContent = `Email: ${jsonData.email}`;
-            document.getElementById("phone").textContent = `Phone: ${jsonData.phone}`;
-            document.getElementById("location").textContent = `Location: ${jsonData.location}`;
+            document.getElementById("email").innerHTML = 'Email: <a href="mailto:' + jsonData.email + '">' + jsonData.email + '</a>';
+            document.getElementById("phone").innerHTML = 'Phone: <a href="tel:' + jsonData.phone + '">' + jsonData.phone + '</a>';
+            document.getElementById("location").textContent = "Location: " + jsonData.location;
+            document.getElementById("location").innerHTML = 'Location: <a href="https://www.google.com/maps/place/Lutsk,+Volyn+Oblast">' + jsonData.location + '</a>';
             document.getElementById("avatar").src = jsonData.avatar.url;
 
             const profileList = document.getElementById("profile");
