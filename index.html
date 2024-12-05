@@ -157,6 +157,7 @@
                 <p id="email"></p>
                 <p id="phone"></p>
                 <p id="location"></p>
+		<p id="github"></p>
             </div>
         </header>
         <div class="left-column">
@@ -184,6 +185,7 @@
             "phone": "+38(067)786-20-98",
             "notFormattedPhone": "380677862098",
             "location": "Lutsk, Ukraine",
+	    "github": "https://github.com/serhiiMalykhin",
             "avatar": {
               "url": "https://s3.resume.io/uploads/profile_picture/file/15649795/9e7d2e64be2539ac79153b5318a6b9c4.jpg?version=5bfa1ebc4"
             },
@@ -517,9 +519,9 @@
             document.getElementById("title").textContent = jsonData.title;
             document.getElementById("email").innerHTML = 'Email: <a href="mailto:' + jsonData.email + '">' + jsonData.email + '</a>';
             document.getElementById("phone").innerHTML = 'Phone: <a href="https://api.whatsapp.com/send/?phone=' + jsonData.notFormattedPhone + '">' + jsonData.phone + '</a>';
-            document.getElementById("location").textContent = "Location: " + jsonData.location;
             document.getElementById("location").innerHTML = 'Location: <a href="https://www.google.com/maps/place/Lutsk,+Volyn+Oblast">' + jsonData.location + '</a>';
             document.getElementById("avatar").src = jsonData.avatar.url;
+	    document.getElementById("github").innerHTML = 'Git: <a href="https://github.com/serhiiMalykhin">' + jsonData.github + '</a>';
 
             const profileList = document.getElementById("profile");
             jsonData.profile.forEach(item => {
