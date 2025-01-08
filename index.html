@@ -39,7 +39,6 @@
             display: flex;
             align-items: center;
             width: 100%;
-            margin-bottom: 20px;
             background-color: #fff;
             padding: 20px 0;
             box-sizing: border-box;
@@ -227,11 +226,35 @@
               "dateUntil": null,
               "projectName": "Self-Educated",
               "description": "Self educated - looking for a new opportunities",
-              "tasks": [],
+              "tasks": [
+				"Planning to do on udemy: reactive programing, java threads, elasticSearch, spark, spring-microservices, aws-certified-developer-associate-dva-c01",
+				"already finished: reactive programming, java thread, spark courses",
+				"Create a pet project after spring-microservices course to practicise"
+			  ],
               "courses": [
                   {
-                  "title": "udemy courses to get aws developer certificate",
+                  "title": "aws for developers",
                   "link": "https://www.udemy.com/course/aws-certified-developer-associate-dva-c01"
+                  },
+                  {
+                  "title": "microservices with spring boot and spring cloud",
+                  "link": "https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud"
+                  },
+                  {
+                  "title": "elasticsearch",
+                  "link": "https://www.udemy.com/course/elasticsearch-complete-guide"
+                  },
+                  {
+                  "title": "java reactive programming",
+                  "link": "https://www.udemy.com/course/complete-java-reactive-programming"
+                  },
+                  {
+                  "title": "java virtual thread",
+                  "link": "https://www.udemy.com/course/java-virtual-thread"
+                  },
+                  {
+                  "title": "spark",
+                  "link": "https://www.udemy.com/course/apache-spark-for-java-developers"
                   }
               ],
               "technologies": [],
@@ -476,6 +499,10 @@
                     taskItem.textContent = task;
                     tasks.appendChild(taskItem);
                 });
+
+		const task_title = document.createElement("p");
+		task_title.textContent = `Courses:`;
+		tasks.appendChild(task_title);
 
                 exp.courses.forEach(course => {
                     const taskItem = document.createElement("li");
