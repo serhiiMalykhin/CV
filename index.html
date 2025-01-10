@@ -224,37 +224,47 @@
               "employer": "Self Employeed",
               "dateFrom": "2024-11",
               "dateUntil": null,
-              "projectName": "Self-Educated",
-              "description": "Self educated - looking for a new opportunities",
+              "projectName": "IoT pet project",
+              "description": "Independent learner actively developing skills in modern Java technologies and related frameworks",
               "tasks": [
-				"Planning to do on udemy: reactive programing, java threads, elasticSearch, spark, spring-microservices, aws-certified-developer-associate-dva-c01",
-				"already finished: reactive programming, java thread, spark courses",
-				"Create a pet project after spring-microservices course to practicise"
+				"Developing a project using Spring Microservices, Java Reactive Programming, and Virtual Threads to solidify practical skills. Focus on IoT, cloud infrastructure, and big data integration."
 			  ],
               "courses": [
                   {
                   "title": "aws for developers",
-                  "link": "https://www.udemy.com/course/aws-certified-developer-associate-dva-c01"
+                  "link": "https://www.udemy.com/course/aws-certified-developer-associate-dva-c01",
+		  "completed": false,
+		  "inprogress": false
                   },
                   {
                   "title": "microservices with spring boot and spring cloud",
-                  "link": "https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud"
+                  "link": "https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud",
+		  "completed": false,
+		  "inprogress": false
                   },
                   {
                   "title": "elasticsearch",
-                  "link": "https://www.udemy.com/course/elasticsearch-complete-guide"
+                  "link": "https://www.udemy.com/course/elasticsearch-complete-guide",
+		  "completed": false,
+		  "inprogress": true
                   },
                   {
                   "title": "java reactive programming",
-                  "link": "https://www.udemy.com/course/complete-java-reactive-programming"
+                  "link": "https://www.udemy.com/course/complete-java-reactive-programming",
+		  "completed": true,
+		  "inprogress": false
                   },
                   {
                   "title": "java virtual thread",
-                  "link": "https://www.udemy.com/course/java-virtual-thread"
+                  "link": "https://www.udemy.com/course/java-virtual-thread",
+		  "completed": true,
+		  "inprogress": false
                   },
                   {
                   "title": "spark",
-                  "link": "https://www.udemy.com/course/apache-spark-for-java-developers"
+                  "link": "https://www.udemy.com/course/apache-spark-for-java-developers",
+		  "completed": true,
+		  "inprogress": false
                   }
               ],
               "technologies": [],
@@ -500,17 +510,11 @@
                     tasks.appendChild(taskItem);
                 });
 
-		const task_title = document.createElement("p");
-		task_title.textContent = `Courses:`;
-		tasks.appendChild(task_title);
-
-                exp.courses.forEach(course => {
-                    const taskItem = document.createElement("li");
-                    taskItem.innerHTML = `
-                        ${course.link ? `<a href="${course.link}">${course.title}</a>` : course.title}
-                    `;
-                    tasks.appendChild(taskItem);
-                });
+		if (exp.courses.length > 0) {
+			const groupedCourses = displayCourses(exp.courses);
+			const compactCourses = renderCourses(groupedCourses);
+			tasks.appendChild(compactCourses);
+		}
 
                 companyContent.appendChild(experienceItem);
                 experienceItem.appendChild(title);
@@ -548,7 +552,7 @@
             document.getElementById("phone").innerHTML = 'Phone: <a href="https://api.whatsapp.com/send/?phone=' + jsonData.notFormattedPhone + '">' + jsonData.phone + '</a>';
             document.getElementById("location").innerHTML = 'Location: <a href="https://www.google.com/maps/place/Lutsk,+Volyn+Oblast">' + jsonData.location + '</a>';
             document.getElementById("avatar").src = jsonData.avatar.url;
-	    document.getElementById("github").innerHTML = 'Git: <a href="https://github.com/serhiiMalykhin">' + jsonData.github + '</a>';
+			document.getElementById("github").innerHTML = 'Git: <a href="https://github.com/serhiiMalykhin">' + jsonData.github + '</a>';
 
             const profileList = document.getElementById("profile");
             jsonData.profile.forEach(item => {
@@ -599,6 +603,42 @@
             const months = endDate.getMonth() - startDate.getMonth();
             return years + (months / 10);
         }
+		
+		// Function to group courses by their statuses
+		const displayCourses = (courses) => {
+			const groupedCourses = {
+				completed: [],
+				inProgress: [],
+				planned: []
+			};
+
+			courses.forEach(course => {
+				if (course.completed) groupedCourses.completed.push(course);
+				else if (course.inprogress) groupedCourses.inProgress.push(course);
+				else groupedCourses.planned.push(course);
+			});
+
+			return groupedCourses;
+		};
+
+		// Function to render courses by category
+		const renderCourses = (groupedCourses) => {
+			const tasks = document.createElement("ul");
+
+			const createCourseList = (title, courses) => {
+				if (courses.length > 0) {
+					const titleItem = document.createElement("li");
+					titleItem.innerHTML = `${title}: ${courses.map(course => course.link ? `<a href='${course.link}'>${course.title}</a>` : course.title).join('  ')}`;
+					tasks.appendChild(titleItem);
+				}
+			};
+
+			createCourseList("Completed Courses", groupedCourses.completed);
+			createCourseList("In Progress", groupedCourses.inProgress);
+			createCourseList("Planned Courses", groupedCourses.planned);
+
+			return tasks;
+		};
 
         window.onload = initProfile;
     </script>
